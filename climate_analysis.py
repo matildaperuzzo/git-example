@@ -1,3 +1,5 @@
+"""Performs conversions between different temperature scales and analyzes climate data."""
+
 SHIFT = 3
 COMMENT = '#'
 climate_data = open('data/sc_climate_data_10.csv', 'r')
@@ -16,9 +18,16 @@ def fahr_to_celsius(fahr):
     return celsius
 
 def fahr_to_kelvin(fahr):
+    """Converts fahrenheit to kelvin
+
+    Args:
+        fahr (float): temperature in fahrenheit
+
+    Returns:
+        float: temperature in Kelvin
+    """
     kelvin = fahr_to_celsius(fahr) + 273.15
     return kelvin
-
 
 
 for line in climate_data:
